@@ -19,9 +19,8 @@ Automatiser le parcours utilisateur suivant :
 
 ---
 
-<pre> 
+<pre>
 ## Structure du projet ``` Weather_Shopper_Project_Tests/ │ ├── Pages/ # Objets des pages (Page Object Model) │ ├── home_page.py │ ├── cart_page.py │ ├── moisturizers_product.py │ └── sunscreens_product.py │ ├── Tests/ # Scénarios de tests automatisés │ └── test_project.py │ ├── Utils/ # Fonctions utilitaires │ └── utils_project.py │ ├── conftest.py # Fixtures Pytest (driver setup/teardown) ├── requirements.txt # Dépendances Python └── README.md # Documentation du projet ``` </pre>
-
 
 ---
 
@@ -38,7 +37,7 @@ Automatiser le parcours utilisateur suivant :
 ## Installation
 
 1. Cloner ou télécharger le projet.
-2. Installer les dépendances Python avec 
+2. Installer les dépendances Python avec
     **pip install -r requirements.txt**
 3. Vérifier que `chromedriver` est accessible (variable PATH ou même dossier que les scripts).
 
@@ -46,20 +45,58 @@ Automatiser le parcours utilisateur suivant :
 
 ## Exécution des tests
 
-Lancer la commande suivante dans le terminal à la racine du projet :
+### Tests disponibles
+
+Le projet contient maintenant plusieurs types de tests :
+
+1. **Test de logique de température** : `Tests/test_project.py`
+   - Vérifie que le bon bouton apparaît selon la température
+
+2. **Tests des pages produits** : `Tests/test_product_pages.py`
+   - Test de la page moisturizers (sélection des produits Aloe et Almond les moins chers)
+   - Test de la page sunscreens (sélection des produits SPF-30 et SPF-50 les moins chers)
+
+### Commandes de test
+
+Lancer tous les tests :
 
 ```bash
-python -m pytest -s Tests/test_project.py
+python -m pytest -v
 ```
 
-Le navigateur Chrome s'ouvrira automatiquement.
+Lancer un test spécifique :
 
-Le test affichera la température lue et vérifiera la présence du bouton adéquat.
+```bash
+python -m pytest Tests/test_project.py -v
+python -m pytest Tests/test_product_pages.py -v
+```
 
-La fenêtre du navigateur se fermera automatiquement à la fin du test.
+Lancer les tests avec génération de rapport HTML :
 
+```bash
+python -m pytest --html=reports/report.html --self-contained-html
+```
+
+Lancer uniquement les tests smoke :
+
+```bash
+python -m pytest -m smoke
+```
+
+Lancer uniquement les tests de produits :
+
+```bash
+python -m pytest -m product
+```
+
+Le navigateur Chrome s'ouvrira automatiquement grâce à webdriver-manager.
+
+Les tests afficheront les résultats dans le terminal et un rapport HTML sera généré dans le dossier `reports/`.
+
+La fenêtre du navigateur se fermera automatiquement à la fin des tests.
 
 ## Les membres du projet
+
 *Feth-Eddine Zineb*
 *Aoun Houssam*
 *Malek Jihane*
