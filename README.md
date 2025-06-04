@@ -19,25 +19,8 @@ Automatiser le parcours utilisateur suivant :
 
 ---
 
-## Structure du projet
-
-Weather_Shopper_Project_Tests/
-│
-├── Pages/ # Objets des pages (Page Object Model)
-│ ├── home_page.py
-│ ├── cart_page.py
-│ ├── moisturizers_product.py
-│ └── sunscreens_product.py
-│
-├── Tests/ # Scénarios de tests automatisés
-│ └── test_project.py
-│
-├── Utils/ # Fonctions utilitaires
-│ └── utils_project.py
-│
-├── conftest.py # Fixtures Pytest (driver setup/teardown)
-├── requirements.txt # Dépendances Python
-└── README.md 
+<pre> 
+## Structure du projet ``` Weather_Shopper_Project_Tests/ │ ├── Pages/ # Objets des pages (Page Object Model) │ ├── home_page.py │ ├── cart_page.py │ ├── moisturizers_product.py │ └── sunscreens_product.py │ ├── Tests/ # Scénarios de tests automatisés │ └── test_project.py │ ├── Utils/ # Fonctions utilitaires │ └── utils_project.py │ ├── conftest.py # Fixtures Pytest (driver setup/teardown) ├── requirements.txt # Dépendances Python └── README.md # Documentation du projet ``` </pre>
 
 
 ---
@@ -77,7 +60,7 @@ La fenêtre du navigateur se fermera automatiquement à la fin du test.
 
 
 ## Les membres du projet
-# Feth-Eddine Zineb
-# Aoun Houssam
-# Malek Jihane
-# Lakssir Mohamed
+*Feth-Eddine Zineb*
+*Aoun Houssam*
+*Malek Jihane*
+*Lakssir Mohamed*
