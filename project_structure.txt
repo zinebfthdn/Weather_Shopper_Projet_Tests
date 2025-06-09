@@ -1,0 +1,29 @@
+.
+├── assets
+│   ├── Screenshot
+│   │   ├── Lancer-un-test-spécifique.png
+│   │   ├── Lancer-uniquement-les-tests-de-produits.png
+│   │   ├── Lancer-uniquement-les-tests-smoke.png
+│   │   └── python-m-pytest-v.png
+│   └── style.css
+├── conftest.py
+├── FRAMEWORK_SUMMARY.md
+├── Pages
+│   ├── cart_page.py
+│   ├── home_page.py
+│   ├── moisturizers_product.py
+│   └── sunscreens_product.py
+├── project_structure.txt
+├── pytest.ini
+├── README.md
+├── reports
+│   ├── final_test_report.html
+│   └── report.html
+├── requirements.txt
+├── Tests
+│   ├── test_product_pages.py
+│   └── test_project.py
+└── Utils
+    └── utils_project.py
+
+7 directories, 20 files

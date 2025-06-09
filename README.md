@@ -64,12 +64,16 @@ Lancer tous les tests :
 python -m pytest -v
 ```
 
+![Résultat de python -m pytest -v](assets/Screenshot/python-m-pytest-v.png)
+
 Lancer un test spécifique :
 
 ```bash
 python -m pytest Tests/test_project.py -v
 python -m pytest Tests/test_product_pages.py -v
 ```
+
+![Résultat de lancer un test spécifique](assets/Screenshot/Lancer-un-test-spécifique.png)
 
 Lancer les tests avec génération de rapport HTML :
 
@@ -83,11 +87,15 @@ Lancer uniquement les tests smoke :
 python -m pytest -m smoke
 ```
 
+![Résultat de lancer uniquement les tests smoke](assets/Screenshot/Lancer-uniquement-les-tests-smoke.png)
+
 Lancer uniquement les tests de produits :
 
 ```bash
 python -m pytest -m product
 ```
+
+![Résultat de lancer uniquement les tests de produits](assets/Screenshot/Lancer-uniquement-les-tests-de-produits.png)
 
 Le navigateur Chrome s'ouvrira automatiquement grâce à webdriver-manager.
 
