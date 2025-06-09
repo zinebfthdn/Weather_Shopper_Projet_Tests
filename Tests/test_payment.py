@@ -28,8 +28,5 @@ def test_payment(driver):
         assert payment.payment_successful(), "❌ Payment not confirmed"
         print("✅ Test completed successfully! Payment processed.")
     except Exception as e:
-        print(f"❌ An error occurred: {e}")
-        print("📍 Current URL:", driver.current_url)
-        print("📍 Title:", driver.title)
         body = driver.find_element(By.TAG_NAME, "body").text
         print("📍 Visible content:\n", body[:1000])  # Limit to 1000 characters

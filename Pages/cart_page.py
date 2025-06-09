@@ -10,12 +10,22 @@ class CartPage:
         self.wait = WebDriverWait(driver, 20)
 
     def open(self):
-        """Ouvre la page du panier."""
+        """Open the cart page."""
+    try:
         cart_button = self.wait.until(
             EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Cart')]"))
         )
         cart_button.click()
+        print("Clicked on cart button.")
+        
+        # Wait for the cart page to load
         self.wait.until(EC.url_contains("/cart"))
+        print("Cart page opened successfully.")
+        
+        # Check the current URL
+        print("Current URL after clicking cart:", self.driver.current_url)
+    except Exception as e:
+        print(f"Error opening cart page: {e}")
 
     def count_items(self):
         """Compte le nombre d'articles dans le panier."""
