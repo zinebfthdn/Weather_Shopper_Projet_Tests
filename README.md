@@ -20,7 +20,7 @@ Automatiser le parcours utilisateur suivant :
 ---
 
 
-## Structure du projet ``` 
+## Structure du projet
 ```bash
 
 Weather_Shopper_Project_Tests/
