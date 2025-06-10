@@ -72,7 +72,7 @@ venv\Scripts\activate    # Sur Windows
 # Installation des dépendances
 pip install -r requirements.txt
 
----
+```
 
 ## Exécution des tests
 
