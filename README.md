@@ -146,7 +146,7 @@ Aussi:
 
 ## Les membres du projet
 
-*Feth-Eddine Zineb*
-*Aoun Houssam*
-*Malek Jihane*
-*Lakssir Mohamed*
+   - *Feth-Eddine Zineb*
+   - *Aoun Houssam*
+   - *Malek Jihane*
+   - *Lakssir Mohamed*
