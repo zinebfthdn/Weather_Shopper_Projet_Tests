@@ -19,8 +19,29 @@ Automatiser le parcours utilisateur suivant :
 
 ---
 
-<pre>
-## Structure du projet ``` Weather_Shopper_Project_Tests/ │ ├── Pages/ # Objets des pages (Page Object Model) │ ├── home_page.py │ ├── cart_page.py │ ├── moisturizers_product.py │ └── sunscreens_product.py │ ├── Tests/ # Scénarios de tests automatisés │ └── test_project.py │ ├── Utils/ # Fonctions utilitaires │ └── utils_project.py │ ├── conftest.py # Fixtures Pytest (driver setup/teardown) ├── requirements.txt # Dépendances Python └── README.md # Documentation du projet ``` </pre>
+
+## Structure du projet ``` 
+```bash
+
+Weather_Shopper_Project_Tests/
+│
+├── Pages/ # Page Object Model
+│ ├── home_page.py
+│ ├── moisturizers_product.py
+│ ├── sunscreens_product.py
+│ └── cart_page.py
+│
+├── Tests/ # Cas de test automatisés
+│ ├── test_project.py # Logique de température
+│ ├── test_product_pages.py # Tests produits
+│ └── test_payment.py # Paiement Stripe
+│
+├── conftest.py # Configuration Pytest (driver setup)
+├── requirements.txt # Dépendances
+├── pytest.ini # Configuration Pytest
+├── README.md # Documentation
+└── reports/ # Rapports HTML pytest
+ ```
 
 ---
 
@@ -36,35 +57,26 @@ Automatiser le parcours utilisateur suivant :
 
 ## Installation
 
-1. Cloner ou télécharger le projet.
-2. Installer les dépendances Python avec
-    **pip install -r requirements.txt**
-3. Vérifier que `chromedriver` est accessible (variable PATH ou même dossier que les scripts).
+```bash
+# Cloner le projet
+git clone https://github.com/zinebfthdn/Weather_Shopper_Projet_Tests.git
+
+
+cd Weather_Shopper_Project_Tests
+
+# Créer un environnement virtuel (optionnel mais recommandé)
+python -m venv venv
+venv\Scripts\activate    # Sur Windows
+# source venv/bin/activate   # Sur macOS/Linux
+
+# Installer les dépendances
+pip install -r requirements.txt
 
 ---
 
 ## Exécution des tests
 
-### Tests disponibles
-
-Le projet contient maintenant plusieurs types de tests :
-
-1. **Test de logique de température** : `Tests/test_project.py`
-   - Vérifie que le bon bouton apparaît selon la température
-
-2. **Tests des pages produits** : `Tests/test_product_pages.py`
-   - Test de la page moisturizers (sélection des produits Aloe et Almond les moins chers)
-   - Test de la page sunscreens (sélection des produits SPF-30 et SPF-50 les moins chers)
-
 ### Commandes de test
-
-Lancer tous les tests :
-
-```bash
-python -m pytest -v
-```
-
-![Résultat de python -m pytest -v](assets/Screenshot/python-m-pytest-v.png)
 
 Lancer un test spécifique :
 
@@ -89,19 +101,48 @@ python -m pytest -m smoke
 
 ![Résultat de lancer uniquement les tests smoke](assets/Screenshot/Lancer-uniquement-les-tests-smoke.png)
 
-Lancer uniquement les tests de produits :
-
-```bash
-python -m pytest -m product
-```
-
-![Résultat de lancer uniquement les tests de produits](assets/Screenshot/Lancer-uniquement-les-tests-de-produits.png)
 
 Le navigateur Chrome s'ouvrira automatiquement grâce à webdriver-manager.
 
 Les tests afficheront les résultats dans le terminal et un rapport HTML sera généré dans le dossier `reports/`.
 
 La fenêtre du navigateur se fermera automatiquement à la fin des tests.
+
+### Tests disponibles
+Le projet contient maintenant plusieurs types de tests :
+
+Lancer tous les tests : 
+
+```bash
+python -m pytest -v
+```
+
+![Résultat de python -m pytest -v](assets/Screenshot/python-m-pytest-v.png)
+
+
+1. **Test de logique de température** : `Tests/test_project.py`
+   - Vérifie que le bon bouton apparaît selon la température
+
+![Résultat de python -m pytest -v](assets/Screenshot/homepage.png)
+
+Aussi:
+
+![Résultat de python -m pytest -v](assets/Screenshot/home_page.png)
+
+2. **Tests des pages produits** : `Tests/test_product_pages.py`
+   - Test de la page moisturizers (sélection des produits Aloe et Almond les moins chers)
+   - Test de la page sunscreens (sélection des produits SPF-30 et SPF-50 les moins chers)
+
+   ```bash
+   python -m pytest -m product
+   ```
+
+   ![Résultat de lancer uniquement les tests de produits](assets/Screenshot/Lancer-uniquement-les-tests-de-produits.png)
+
+2. **Tests de page de payment** : `Tests/test_payment.py`
+   - Simulation de paiement via Stripe avec carte test
+
+   ![Résultat de lancer uniquement les tests de produits](assets/Screenshot/payment.png)
 
 ## Les membres du projet
 
