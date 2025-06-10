@@ -64,12 +64,12 @@ git clone https://github.com/zinebfthdn/Weather_Shopper_Projet_Tests.git
 
 cd Weather_Shopper_Project_Tests
 
-# Créer un environnement virtuel (optionnel mais recommandé)
+# Création d'un environnement virtuel
 python -m venv venv
 venv\Scripts\activate    # Sur Windows
 # source venv/bin/activate   # Sur macOS/Linux
 
-# Installer les dépendances
+# Installation des dépendances
 pip install -r requirements.txt
 
 ---
